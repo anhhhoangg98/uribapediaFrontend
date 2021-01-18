@@ -1,13 +1,26 @@
 .navbar-nav {
     background-color: white;
+    margin: 0;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: #585858;
+    color: #717f86;
+    margin: 10px 5px;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: 700;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
     color: #013ADF;
+}
+
+.navbar-right {
+    float: right;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
 }
 
 .banner {
@@ -54,4 +67,198 @@ p {
     margin: 10px 0;
     font-size: 20px;
     width: 90%;
+}
+
+.navbar-header {
+    font-size: 17px;
+}
+
+.navbar-toggler {
+    float: right;
+}
+
+#content1 {
+    padding: 7em 0em 2em;
+}
+
+.bottom-line {
+    width: 75px;
+    height: 3px;
+    background-color: #0175C2;
+}
+
+.header-section .h1 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #4b4b4b;
+}
+
+.yl {
+    border-bottom: 2px solid #ffd701;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.header-section {
+    margin-bottom: 4em;
+    padding: 0 1em;
+}
+
+.col-md-push-1 {
+    margin-left: 70px;
+}
+
+.mt5 {
+    margin-top: 5em;
+}
+
+#content2 {
+    background-color: rgb(247, 247, 247);
+    padding-top: 70px;
+}
+
+.service-box {
+    background: #fff;
+    padding: 30px 30px 0px;
+    box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.1);
+    height: -webkit-fill-available;
+}
+
+.icon-box {
+    padding: 10px 0 10px;
+}
+
+.icon-box i {
+    color: #0175C2;
+    font-size: 65px;
+}
+
+.ser-text {
+    font-size: 1.7em;
+    font-weight: 900;
+    color: #0175C2;
+}
+
+.fea-text {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #444;
+}
+
+#content3 {
+    background-color:  rgb(247, 247, 247);
+    padding: 2em 0 0 0;
+}
+
+.content3-cont {
+    padding: 5em 1.5em;
+}
+
+.categories {
+    border-bottom: 1px solid #dddddd;
+    border-top: 1px solid #dddddd;
+    display: inline-block;
+    padding-bottom: 5em;
+    padding-top: 5em;
+}
+
+.categories p {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #444;
+}
+
+#content4 {
+    padding-top: 5em;
+}
+
+.header-section h2 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #4b4b4b;
+}
+
+.details {
+    padding: 20px 20px;
+}
+
+.pm-staff-profile-name {
+    font-size: 30px;
+    color: #0175C2;
+    font-weight: 700;
+}
+
+#content5 {
+    background-color: rgb(247, 247, 247);
+    padding: 7em 0 2em;
+}
+
+.price-box {
+    padding: 3.5em 4.5em 3.5em 4.5em;
+    background: #ffffff;
+    text-align: center;
+    border: 2px solid #0175C2;
+    margin: 1.5em auto 1em auto;
+    display: block;
+    max-width: 100%;
+}
+
+.price-middleheading {
+    font-size: 40px;
+    color:  #0175C2;
+    font-weight: 700;
+    padding-bottom: 1em;
+}
+
+.price-largeheading {
+    font-size: 50px;
+    color: #0175C2;
+    font-weight: 700;
+    margin-top: -30px;
+}
+
+.price-smallheading {
+    font-size: 25px;
+    color: #0175C2;
+    font-weight: 700;
+}
+
+.price-xsmallheading {
+    font-size: 15px;
+}
+
+.gray-bold {
+    height: 2px;
+    background-color: #CCCCCC;
+}
+
+.price-feature {
+    margin-top: 40px;
+    text-align: left;
+    padding-right: 20px;
+}
+
+.price-feature li {
+    position: relative;
+    font-size: 26px;
+    font-weight: 700;
+    list-style: none;
+}
+
+.fa-check {
+    color: blue;
+}
+
+.price-box ul {
+    padding-inline-start: 10px;
+}
+
+.price-feature li font {
+    color: #4b4b4b;
+}
+
+.price-notice {
+    font-size: 80%;
+    margin-top: 4.5em;
+    text-align: left;
 }
