@@ -10,10 +10,6 @@
     color: #013ADF;
 }
 
-.navbar-light .navbar-nav li button {
-    margin: 10px 20px;
-}
-
 nav .dropdown-menu li a {
     color: #717f86;
     margin: 10px 5px;
@@ -126,15 +122,16 @@ p {
 
 .service-box {
     background: #fff;
-    padding: 30px 30px 0px;
-    box-shadow: 0px 0px 1px 1px #000000;
-    height: fit-content;
+    padding: 30px 30px 0;
+    box-shadow: 0px 0px 1px 1px #E5E9E0;
+    height: 495px;
 }
 
-@media (max-width: 767px) and (min-width: 20px) {
+@media (max-width: 991px) and (min-width: 20px) {
     .service-box {
         margin-bottom: 15px;
         padding: 25px 20px;
+        height: auto;
     }
 }
 
@@ -343,7 +340,7 @@ nav .container .navbar-header {
     margin-top: 5em;
 }
 
-@media screen and (max-width: 767px) and (min-width: 2px) {
+@media (max-width: 767px) and (min-width: 2px) {
     .img-reponsive {
         width: 60%;
         margin: 1em auto;
@@ -353,4 +350,14 @@ nav .container .navbar-header {
 
 .dropdown-toggle::after {
     content: none;
+}
+
+#dropdownMenuButton {
+    border: solid #E5E7E9;
+}
+
+@media (max-width: 767px) and (min-width: 20px) {
+    .img-brand {
+        width: 70%;
+    }
 }
