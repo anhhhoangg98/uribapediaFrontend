@@ -8,52 +8,58 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="./js/main.js"></script>
 </head>
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">             
-        <a class="navbar-brand" href="#">
-            <img src="images/logo.jpg" class="img-fluid img-brand" alt="">
-        </a>
-        <div class="dropdown d-lg-none">
-            <button class="btn dropdown-toggle d-lg-none" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="#">What is Uribapedia</a></li>
-                <li><a class="dropdown-item" href="#">Information features</a></li>
-                <li><a class="dropdown-item" href="#">customer's voice</a></li>
-                <li><a class="dropdown-item" href="#">Fee</a></li>
-                <li><a class="dropdown-item" href="#">Operating company</a></li>
-                <li><a class="dropdown-item" href="#">Contact Us</a></li>
-                <button class="btn btn-primary">Login</button>
-              </ul>
-        </div>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.jpg" class="img-fluid img-brand" alt="">
+            </a>
+            <div class="dropdown d-lg-none">
+                <button class="btn dropdown-toggle d-lg-none" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">What is Uribapedia</a></li>
+                    <li><a class="dropdown-item" href="#">Information features</a></li>
+                    <li><a class="dropdown-item" href="#">customer's voice</a></li>
+                    <li><a class="dropdown-item" href="#">Fee</a></li>
+                    <li><a class="dropdown-item" href="#">Operating company</a></li>
+                    <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                    <button id="hide" class="btn btn-primary">Login</button>
+                  </ul>
+            </div>
+            
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0 navbar-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">What is Uribapedia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Information features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">customer's voice</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Fee</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Operating company</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary" type="submit">Login</button>
+                    </li>
+                </ul>
+            </div>
+        </div>             
         
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0 navbar-right">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">What is Uribapedia</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Information features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">customer's voice</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Fee</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Operating company</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                    <button class="btn btn-primary" type="submit">Login</button>
-                </li>
-            </ul>
-        </div>
     </nav>
     <div class="banner">
         <div class="container">
@@ -63,7 +69,7 @@
                         <img src="images/topcopy.png" class="img-fluid" alt="">
                     </p>
                     <div class="text-center quote"> 
-                        <a href="#" data-target="#login" data-toggle="modal" class="btn get-quote">Login</a>                    
+                        <a href="#" id="show" data-target="#login" data-toggle="modal" class="btn get-quote">Login</a>                    
                     </div>
                 </div>  
             </div>
@@ -72,7 +78,7 @@
 
     <div id="content1">
         <div class="container">
-            <div class="header-section">
+            <div class="header-section" data-aos="fade-up">
                 <h1 class="text-center">
                     <font class="font-style">What is the sales floor image database Uribapedia?</font>
                 </h1>
@@ -83,8 +89,8 @@
             </div>
             <div class="col-md-10 offset-md-1">
                 <div class="row justify-content-between">
-                    <div class="col-md-4">
-                        <img src="images/about1_official.png" class="img-fluid img-reponsive" alt="Responsive image">
+                    <div class="col-md-4" data-aos="fade-right">
+                        <img src="images/about1_official.png" class="img-fluid img-reponsive" alt="">
                     </div>
                     <div class="col-md-7">
                         <h3 class="text-center yellow-line">
@@ -98,7 +104,7 @@
             </div>
             <div class="col-md-10 offset-md-1">
                 <div class="row mart5 justify-content-between">
-                    <div class="col-md-4 order-md-2">
+                    <div class="col-md-4 order-md-2" data-aos="fade-left">
                         <img src="images/about2_speedy.png" class="img-fluid img-reponsive" alt="">
                     </div>
                     <div class="col-md-7 order-md-1">
@@ -113,7 +119,7 @@
             </div>
             <div class="col-md-10 offset-md-1">
                 <div class="row mart5 justify-content-between">
-                    <div class="col-md-4">
+                    <div class="col-md-4" data-aos="fade-right">
                         <img src="images/about3_idea.png" class="img-fluid img-reponsive" alt="">
                     </div>
                     <div class="col-md-7">
@@ -128,7 +134,7 @@
             </div>
             <div class="col-md-10 offset-md-1">
                 <div class="row mart5 justify-content-between">
-                    <div class="col-md-4 order-md-2">
+                    <div class="col-md-4 order-md-2" data-aos="fade-left">
                         <img src="images/about4_quality.png" class="img-fluid img-reponsive" alt="">
                     </div>
                     <div class="col-md-7 order-md-1">
@@ -146,7 +152,7 @@
 
     <div id="content2">
         <div class="container">
-            <div class="header-section" style="width: -webkit-fill-available;">
+            <div class="header-section" data-aos="fade-up">
                 <h1 class="text-center">
                     <font class="font-style">Information features</font>
                 </h1>
@@ -157,12 +163,12 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6">
-                    <div class="service-box text-center">
+                    <div class="service-box text-center" data-aos="fade-up">
                         <div class="icon-box">
                             <i class="far fa-square"></i>
                         </div>
                         <div class="">
-                            <h4 class="ser-text">46,537</h4>
+                            <h4 class="ser-text">302,362</h4>
                             <p class="fea-text yellow-line">
                                 <font class="font-style">Number of recorded images</font>
                             </p>
@@ -173,12 +179,12 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="service-box text-center">
+                    <div class="service-box text-center" data-aos="fade-up">
                         <div class="icon-box">
                             <i class="far fa-square"></i>
                         </div>
                         <div class="">
-                            <h4 class="ser-text">47,698</h4>
+                            <h4 class="ser-text counter">96,687,987</h4>
                             <p class="fea-text yellow-line">
                                 <font class="font-style">Number of stringed characters</font>
                             </p>
@@ -189,7 +195,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="service-box text-center">
+                    <div class="service-box text-center" data-aos="fade-up">
                         <div class="icon-box">
                             <i class="far fa-square"></i>
                         </div>
@@ -211,7 +217,7 @@
     <div id="content3">
         <div class="container">
             <div class="content3-cont">
-                <div class="categories">
+                <div class="categories" data-aos="fade-up">
                     <div class="row">
                         <div class="col-md-5">
                             <h3 class="ser-text">
@@ -225,28 +231,30 @@
                         </div>
                     </div>
                 </div>
-                <div class="row" style="margin-top: 5em;">
-                    <div class="col-md-5">
-                        <h3 class="ser-text">
-                            <font class="font-style">SP Idea Archive</font>
-                        </h3>
-                        <p>
-                            <font class="font-style">Specialized staff familiar with qualitative surveys pick up and strategically analyze "good" planning ideas found from daily sales floor observations and accumulate them as "sales floor topics". You can check sales promotion trends and planning ideas across industries.</font>
-                        </p>
+                <div class="categories" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h3 class="ser-text">
+                                <font class="font-style">SP Idea Archive</font>
+                            </h3>
+                            <p>
+                                <font class="font-style">Specialized staff familiar with qualitative surveys pick up and strategically analyze "good" planning ideas found from daily sales floor observations and accumulate them as "sales floor topics". You can check sales promotion trends and planning ideas across industries.</font>
+                            </p>
+                        </div>
+                        <div class="col-md-7">
+                            <p>
+                                <img src="images/idea-archive.png" class="img-fluid alt="">
+                            </p>
+                        </div>
                     </div>
-                    <div class="col-md-7">
-                        <p>
-                            <img src="images/idea-archive.png" class="img-fluid alt="">
-                        </p>
-                    </div>
-                </div>
+                </div> 
             </div>
         </div>
     </div>
 
     <div id="content4">
         <div class="container">
-            <div class="header-section">
+            <div class="header-section" data-aos="fade-up">
                 <h2 class="text-center">
                     <font class="font-style">customer's voice</font>
                 </h2>
@@ -256,11 +264,9 @@
                 <hr class="bottom-line">
             </div>
             <div class="row">
-                <div class="col-md-4">
-                    <div class="">
-                        <div class="text-center">
-                            <img src="images/voice01.jpg" class="img-fluid" alt="">
-                        </div>
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="text-center"> 
+                        <img src="images/voice01.jpg" class="img-fluid" alt="">
                     </div>
                     <div class="details text-center">
                         <p class="pm-staff-profile-name">
@@ -271,11 +277,9 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="">
-                        <div class="text-center">
-                            <img src="images/voice02.jpg" class="img-fluid" alt="">
-                        </div>
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="text-center">
+                        <img src="images/voice02.jpg" class="img-fluid" alt="">
                     </div>
                     <div class="details text-center">
                         <p class="pm-staff-profile-name">
@@ -286,11 +290,9 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="">
-                        <div class="text-center">
-                            <img src="images/voice03.jpg" class="img-fluid" alt="">
-                        </div>
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="text-center">
+                        <img src="images/voice03.jpg" class="img-fluid" alt="">
                     </div>
                     <div class="details text-center">
                         <p class="pm-staff-profile-name">
@@ -303,11 +305,9 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
-                    <div class="">
-                        <div class="text-center">
-                            <img src="images/voice04.jpg" class="img-fluid" alt="">
-                        </div>
+                <div class="col-md-6" data-aos="fade-up">
+                    <div class="text-center">
+                        <img src="images/voice04.jpg" class="img-fluid" alt="">
                     </div>
                     <div class="details text-center">
                         <p class="pm-staff-profile-name">
@@ -318,11 +318,9 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="">
-                        <div class="text-center">
-                            <img src="images/voice05.jpg" class="img-fluid" alt="">
-                        </div>
+                <div class="col-md-6" data-aos="fade-up">
+                    <div class="text-center">
+                        <img src="images/voice05.jpg" class="img-fluid" alt="">
                     </div>
                     <div class="details text-center">
                         <p class="pm-staff-profile-name">
@@ -349,7 +347,7 @@
                 <div class="col-12">
                     <div class="price-box">
                         <div>
-                            <div class="price-topheading" style="text-align: left;">
+                            <div class="price-topheading">
                                 <div class="price-middleheading">
                                     <font class="font-style">Monthly flat rate:</font>
                                 </div>
@@ -397,13 +395,13 @@
 
     <div id="content6">
         <div class="container">
-            <div class="col-md-12 header-section text-center">
+            <div class="col-md-12 header-section text-center" data-aos="fade-up">
                 <h2>
                     <font class="font-style">Operating company</font>
                 </h2>
                 <hr class="bottom-line">
             </div>
-            <div class="row">
+            <div class="row" data-aos="fade-up">
                 <div class="col-md-7 offset-md-1">
                     <h4>
                         <font class="font-style">Kaikata Co., Ltd.</font>
@@ -422,7 +420,7 @@
                     </p>
                 </div>
             </div>
-            <div class="row clear-top">
+            <div class="row clear-top" data-aos="fade-up">
                 <div class="col-md-7 offset-md-1">
                     <p>
                         <font>General Incorporated Association Japan Promotional Marketing </font>
@@ -511,6 +509,13 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+        offset: 100,
+        duration: 800
+        });
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
